@@ -1,6 +1,6 @@
 import { Card } from "../components/Card";
 import BasicLayout from "../layout/Basic";
-import styled from "styled-components";
+import * as S from './styles'
 
 interface PokeResults {
   id: number;
@@ -34,15 +34,11 @@ const Home = ({ pokemons }: Props) => {
   return (
     <BasicLayout>
       <div>
-        <Card />
-        {/* <h1>
-          Poke<span style={{ color: "red" }}>Next</span>
-        </h1>
-        <ul>
+        <S.PokemonContainer>
           {pokemons.map((pokemon: PokeResults) => (
-            <li key={pokemon.id}>{pokemon.name}</li>
+            <Card key={pokemon.id} pokemon={pokemon} />
           ))}
-        </ul> */}
+        </S.PokemonContainer>
       </div>
     </BasicLayout>
   );

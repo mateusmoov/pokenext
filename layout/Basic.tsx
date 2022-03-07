@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
   *,
   *::before,
   *::after {
-    font-family: Helvetica;
+    font-family: Montserrat;
     margin: 0;
     padding: 0;
     box-sizing: inherit;
