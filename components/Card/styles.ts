@@ -14,18 +14,20 @@ font-family: Montserrat ;
 `
 
 export const PokemonId = styled.div`
-background-color: black;
-opacity: 50%;
-color: white;
-border-radius: 10px;
-padding: 2px 15px;
 font-family:Montserrat;
 font-weight: lighter ;
+color: white;
+background-color: black;
+opacity: 50%;
+border-radius: 10px;
+padding: 2px 15px;
+margin-bottom: 5px;
 `
 
 export const PokemonName = styled.h1`
 font-family: Montserrat;
-font-size: 2em;
 font-weight: bold;
 color: white;
+font-size: 2em;
+margin-bottom: 5px;
 `
