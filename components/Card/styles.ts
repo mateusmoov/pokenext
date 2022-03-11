@@ -1,11 +1,15 @@
 import Image from "next/image"
 import styled from "styled-components"
 
-export const CardContainer = styled.div`
+interface Props {
+    inputColor: string;
+}
+
+export const CardContainer = styled.div<Props>`
 display: flex;
 flex-direction: column;
 align-items: center;
-background-color: pink;
+background: linear-gradient(180deg,rgba(0, 0, 0, 0.3)  0%, rgba(255, 255, 255, 0.3) 100%), ${(props) => props.inputColor};
 padding: 20px;
 padding: 60px;
 margin: 0 30px 30px 0;

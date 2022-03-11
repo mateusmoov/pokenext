@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import * as S from "./styles";
 
 interface PokeResults {
@@ -16,11 +17,26 @@ const titleCase = (string: string) => {
 }
 
 
+
 export const Card = ({ pokemon }: Props) => {
+
+  const [dataPokemonColor, setDataPokemonColor] = useState('')
+
+  const getPokemonColor = async () => {
+    const pokemonColor = "https://pokeapi.co/api/v2/pokemon-species"
+    const res = await fetch(`${pokemonColor}/${pokemon.id}/`)
+    const data = await res.json()
+    setDataPokemonColor(data.color.name)
+  }
+
+
+  useEffect(() => {
+    getPokemonColor()
+  }, [])
 
   return (
     <>
-      <S.CardContainer>
+      <S.CardContainer inputColor={dataPokemonColor}>
         <S.PokemonName>
           {titleCase(pokemon.name)}
         </S.PokemonName>

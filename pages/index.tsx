@@ -13,7 +13,7 @@ interface Props {
 }
 
 export const getStaticProps = async () => {
-  const maxPokemons = 251;
+  const maxPokemons = 60;
   const api = "https://pokeapi.co/api/v2/pokemon";
 
   const res = await fetch(`${api}?limit=${maxPokemons}`);
