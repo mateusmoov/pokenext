@@ -10,7 +10,6 @@ display: flex;
 flex-direction: column;
 align-items: center;
 background: linear-gradient(180deg,rgba(0, 0, 0, 0.3)  0%, rgba(255, 255, 255, 0.3) 100%), ${(props) => props.inputColor};
-padding: 20px;
 padding: 60px;
 margin: 0 30px 30px 0;
 border-radius: 20px;

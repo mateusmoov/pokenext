@@ -16,8 +16,6 @@ const titleCase = (string: string) => {
   return string[0].toUpperCase() + string.slice(1).toLowerCase();
 }
 
-
-
 export const Card = ({ pokemon }: Props) => {
 
   const [dataPokemonColor, setDataPokemonColor] = useState('')
