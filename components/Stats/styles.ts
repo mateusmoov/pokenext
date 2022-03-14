@@ -18,8 +18,8 @@ const modifiers = {
 
 export const StatsContainer = styled.div<Props>`
   ${({ variant }) => css`
-    width: 82px;
-    height: 39px;
+    width: 120px;
+    height: 60px;
     border-radius: 5px;
     text-align: center;
     ${modifiers[variant]}
@@ -29,13 +29,13 @@ export const StatsContainer = styled.div<Props>`
 export const TextContainer = styled.div`
   padding: 3px 0;
   p {
-    font-size: 9px;
+    font-size: 15px;
     color: white;
     font-weight: lighter;
   }
 
   span {
-    font-size: 18px;
+    font-size: 26px;
     color: white;
     font-weight: 700;
   }

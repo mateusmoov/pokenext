@@ -1,12 +1,18 @@
 import * as S from "./styles";
 
-export const Stats = () => {
+interface Props {
+    children: string,
+    statsNumber: string
+    variant: "red" | "yellow" | "blue";
+}
+
+export const Stats = ({ children, statsNumber, variant }: Props) => {
     return (
         <>
-            <S.StatsContainer variant="yellow">
+            <S.StatsContainer variant={variant}>
                 <S.TextContainer>
-                    <p>HP</p>
-                    <span>34</span>
+                    <p>{children}</p>
+                    <span>{statsNumber}</span>
                 </S.TextContainer>
             </S.StatsContainer>
         </>

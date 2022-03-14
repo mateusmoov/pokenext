@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { Stats } from "../../components/Stats";
 import * as S from "./styles";
 
 interface PokeResults {
@@ -40,6 +41,14 @@ export const Card = ({ pokemon }: Props) => {
         </S.PokemonName>
         <Image src={`https://cdn.traction.one/pokedex/pokemon/${pokemon.id}.png`} width="256" height="256" />
         <S.PokemonId>#{pokemon.id}</S.PokemonId>
+        <S.StatsContainer>
+          <Stats variant="blue" children="HP" statsNumber="s" />
+          <Stats variant="yellow" children="Attack" statsNumber="s" />
+        </S.StatsContainer>
+        <div>
+          <Stats variant="red" children="Defense" statsNumber="s" />
+        </div>
+
       </S.CardContainer>
     </>
   );
