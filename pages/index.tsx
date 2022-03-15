@@ -1,5 +1,5 @@
 import { Card } from "../components/Card";
-import { Stats } from "../components/Stats";
+import { Input } from "../components/Input";
 import BasicLayout from "../layout/Basic";
 import * as S from './styles'
 
@@ -34,13 +34,14 @@ export const getStaticProps = async () => {
 const Home = ({ pokemons }: Props) => {
   return (
     <BasicLayout>
-      <div>
+      <Input />
+      {/* <div>
         <S.PokemonContainer>
           {pokemons.map((pokemon: PokeResults) => (
             <Card key={pokemon.id} pokemon={pokemon} />
           ))}
         </S.PokemonContainer>
-      </div>
+      </div> */}
     </BasicLayout>
   );
 };

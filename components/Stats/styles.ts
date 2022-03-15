@@ -32,6 +32,7 @@ export const TextContainer = styled.div`
     font-size: 15px;
     color: white;
     font-weight: lighter;
+    margin-bottom: 5px;
   }
 
   span {
