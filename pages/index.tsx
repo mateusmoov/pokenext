@@ -34,14 +34,13 @@ export const getStaticProps = async () => {
 const Home = ({ pokemons }: Props) => {
   return (
     <BasicLayout>
-      <Input />
-      {/* <div>
+      <div>
         <S.PokemonContainer>
           {pokemons.map((pokemon: PokeResults) => (
             <Card key={pokemon.id} pokemon={pokemon} />
           ))}
         </S.PokemonContainer>
-      </div> */}
+      </div>
     </BasicLayout>
   );
 };

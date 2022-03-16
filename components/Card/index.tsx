@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Stats } from "../../components/Stats";
 import * as S from "./styles";
@@ -36,19 +37,16 @@ export const Card = ({ pokemon }: Props) => {
   return (
     <>
       <S.CardContainer inputColor={dataPokemonColor}>
-        <S.PokemonName>
-          {titleCase(pokemon.name)}
-        </S.PokemonName>
-        <Image src={`https://cdn.traction.one/pokedex/pokemon/${pokemon.id}.png`} width="256" height="256" />
-        <S.PokemonId>#{pokemon.id}</S.PokemonId>
-        <S.StatsContainer>
-          <Stats variant="blue" children="HP" statsNumber="s" />
-          <Stats variant="yellow" children="Attack" statsNumber="s" />
-        </S.StatsContainer>
-        <div>
-          <Stats variant="red" children="Defense" statsNumber="s" />
-        </div>
-
+        <S.CardFront>
+          <S.PokemonName>
+            {titleCase(pokemon.name)}
+          </S.PokemonName>
+          <Image src={`https://cdn.traction.one/pokedex/pokemon/${pokemon.id}.png`} width="256" height="256" />
+          <S.PokemonId>#{pokemon.id}</S.PokemonId>
+        </S.CardFront>
+        <S.CardBack inputColor={dataPokemonColor}>
+          <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Informações do pokemon</Link>
+        </S.CardBack>
       </S.CardContainer>
     </>
   );
